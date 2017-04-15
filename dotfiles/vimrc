@@ -94,9 +94,15 @@ set notimeout ttimeout ttimeoutlen=200
 set pastetoggle=<F11>
 
 set undofile                " persistent undo
+set undodir=$HOME/.vim/undo
 set undolevels=1000         " Maximum number of changes that can be undone
 set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
  
+" create undo directory
+if !isdirectory(&undodir)
+    call mkdir(&undodir)
+endif
+
 "------------------------------------------------------------
 " Indentation options {{{1
  
