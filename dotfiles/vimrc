@@ -198,8 +198,9 @@ if globpath(&runtimepath, '*/CamelCaseMotion/') !=# ''
     call camelcasemotion#CreateMotionMappings('<leader>')
 endif
 let g:ctrlp_regexp = 1
-let g:alternateSearchPath = 'sfr:../../src,reg:|/\([^/]+\)/src|/\1/include/\1||'
+let g:alternateSearchPath = 'sfr:../../src,reg:|/\([^/]\+\)/src|/\1/include/\1||'
 let g:vim_namespace_obj_map_keys = 1
+let g:alternateNoDefaultAlternate = 1
 
 "------------------------------------------------------------
 " Restore Cursor Position {{{1
