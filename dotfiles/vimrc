@@ -38,7 +38,11 @@ set showcmd
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
 set hlsearch
- 
+
+" display tabs and trailing whitespace
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+
 "------------------------------------------------------------
 " Usability options {{{1
  
