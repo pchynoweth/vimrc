@@ -1,6 +1,7 @@
 Plug 'bkad/CamelCaseMotion'
 Plug 'junegunn/vader.vim'
 Plug 'kien/ctrlp.vim'
+Plug 'tacahiroy/ctrlp-funky'
 Plug 'majutsushi/tagbar'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'myusuf3/numbers.vim'
@@ -16,3 +17,5 @@ Plug 'inkarkat/argtextobj.vim'
 Plug 'vim-scripts/taglist.vim'
 Plug 'pchynoweth/vim-namespace-obj'
 Plug 'mhinz/vim-signify'
+Plug 'pchynoweth/vim-cpp-inlines-file-switcher'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
