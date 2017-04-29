@@ -2,6 +2,7 @@
 " Features {{{1
 
 set nocompatible
+set background=dark
 
 filetype indent plugin on
 
@@ -244,7 +245,7 @@ endif
             endif
         endif
     "}}}
-let g:alternateSearchPath = 'sfr:../../src,reg:|/\([^/]\+\)/src|/\1/include/\1||'
+let g:alternateSearchPath = 'sfr:../../src,reg:|/\([^/]\+\)/src|/\1/include/\1||,sfr:../include,sfr:..'
 let g:vim_namespace_obj_map_keys = 1
 let g:alternateNoDefaultAlternate = 1
 
