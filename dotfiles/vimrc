@@ -11,6 +11,7 @@ syntax on
 
 " Change leader to comma
 let mapleader = ","
+let maplocalleader = "_"
 
 " folding
 set foldmethod=marker
@@ -157,6 +158,8 @@ inoremap <C-S-tab> <Esc>gTi
 inoremap <C-tab>   <Esc>gti
 inoremap <C-t>     <Esc>:tabnew<CR>
 
+set matchpairs+=<:> " Match, to be used with %
+
 "------------------------------------------------------------
 " vim-plug {{{1
 
@@ -264,4 +267,11 @@ augroup resCur
     autocmd!
     autocmd BufWinEnter * call ResCur()
 augroup END
-" -----------------------------------------------------------
+"------------------------------------------------------------
+" File Specific Options {{{1
+
+    " Instead of reverting the cursor to the last position in the buffer, we
+    " set it to the first line when editing a git commit message
+    au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
+
+"------------------------------------------------------------
