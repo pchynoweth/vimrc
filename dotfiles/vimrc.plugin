@@ -19,3 +19,5 @@ Plug 'pchynoweth/vim-namespace-obj'
 Plug 'mhinz/vim-signify'
 Plug 'pchynoweth/vim-cpp-inlines-file-switcher'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'kana/vim-textobj-user'
+Plug 'sgur/vim-textobj-parameter'
