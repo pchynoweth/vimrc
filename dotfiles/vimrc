@@ -248,6 +248,28 @@ endif
             endif
         endif
     "}}}
+    " vim-textobj-parameter {{{
+        let g:vim_textobj_parameter_mapping = 'a'
+    " }}}
+    " vim-cmake {{{
+        let s:git_root = systemlist("git rev-parse --show-toplevel")
+        if filereadable("CMakeLists.txt") && !empty(s:git_root)
+            let g:cmake_build_dir_override = s:git_root[0] . "/build"
+            let g:cmake_project = systemlist("command grep -oP '(?<=project\\\()\\\w+' CMakeLists.txt")
+            function s:make_extras_make(...)
+                exec "CMake"
+                if empty(a:000)
+                    exec "make " . g:cmake_project[0]
+                else
+                    exec "make " . join(a:000)
+                endif
+            endfunction
+            if !empty(g:cmake_project)
+                command! -nargs=? CMakeBuild call s:make_extras_make(<f-args>)
+            endif
+        endif
+        unlet s:git_root
+    " }}}
 let g:alternateSearchPath = 'sfr:../../src,reg:|/\([^/]\+\)/src|/\1/include/\1||,sfr:../include,sfr:..'
 let g:vim_namespace_obj_map_keys = 1
 let g:alternateNoDefaultAlternate = 1
