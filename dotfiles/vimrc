@@ -269,6 +269,7 @@ endif
             endif
         endif
         unlet s:git_root
+        let g:cmake_project_generator="Ninja"
     " }}}
 let g:alternateSearchPath = 'sfr:../../src,reg:|/\([^/]\+\)/src|/\1/include/\1||,sfr:../include,sfr:..'
 let g:vim_namespace_obj_map_keys = 1
