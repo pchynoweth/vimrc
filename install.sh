@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 for f in `ls dotfiles`; do
     dst=$HOME/.$f
